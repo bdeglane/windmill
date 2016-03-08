@@ -2,7 +2,7 @@
     {% if items is defined %}
         <ul>
             {% for item in items %}
-                <li><a href="{{ item.url }}">{{ item.name }}</a> price: {{ item.price|sample }}</li>
+                {% include "AppBundle:Default:Components/List/Item/item.html.twig" %}
             {% endfor %}
         </ul>
     {% endif %}
