@@ -11,11 +11,13 @@ class DefaultController extends Controller
 		$items = [
 			[
 				"url" => "/",
-				"name" => "test"
+				"name" => "test",
+				"price" => 2
 			],
 			[
 				"url" => "/",
-				"name" => "test-2"
+				"name" => "test-2",
+				"price" => 2
 			]
 		];
 
