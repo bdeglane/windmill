@@ -12,12 +12,12 @@ class DefaultController extends Controller
 			[
 				"url" => "/",
 				"name" => "test",
-				"price" => 2
+				"price" => "otoototrortorroqfbqkfv:d"
 			],
 			[
 				"url" => "/",
 				"name" => "test-2",
-				"price" => 2
+				"price" => "otoototrortorroqfbqkfv:d"
 			]
 		];
 
