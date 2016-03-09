@@ -1,0 +1,4 @@
+# Mopa bootstrap Configuration
+mopa_bootstrap:
+    form:
+        horizontal: false

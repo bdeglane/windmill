@@ -9,15 +9,16 @@
     </title>
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('bundles/app/bootstrap-3.3.6-dist/css/bootstrap.min.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('bundles/app/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css') }}"/>
         <link rel="stylesheet" href="{{ asset('bundles/app/style/style.css') }}"/>
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 </head>
 <body>
-{% block body %}
+<div class="container-fluid">
+    {% block body %}
 
-{% endblock %}
+    {% endblock %}
+</div>
 {% block javascripts %}
     <script src="{{ asset('bundles/app/jquery-2.2.1/jquery-2.2.1.min.js') }}"></script>
     <script src="{{ asset('bundles/app/bootstrap-3.3.6-dist/js/bootstrap.min.js') }}"></script>

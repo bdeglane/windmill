@@ -18,13 +18,19 @@ class LinkType extends AbstractType
 		$builder
 			->add('name', null, [
 				'label' => 'nom du lien',
-				'required' => true
+				'required' => true,
 			])
-			->add('category')
-			->add('author')
-			->add('url')
+			->add('category', null, [
+				'required' => true,
+			])
+			->add('author', null, [
+				'required' => true,
+			])
+			->add('url', null, [
+				'required' => true,
+			])
 			->add('createdAt', DateTimeType::class, [
-				'format' => 'single_text',
+				'widget' => 'single_text',
 				'html5' => true
 			]);
 	}

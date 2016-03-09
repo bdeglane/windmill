@@ -12,4 +12,31 @@ use Doctrine\ORM\EntityRepository;
  */
 class LinkRepository extends EntityRepository
 {
+	public function findLink()
+	{
+		return $this
+			->createQueryBuilder('l')
+			->select(['l.id', 'l.name', 'l.url', 'l.createdAt'])
+			->orderBy('l.id')
+			->getQuery()
+			->getResult();
+	}
+
+	public function findLinkSince($day)
+	{
+		// date - $day
+		$date = new \DateTime('now');
+		$date->modify('-' . $day . ' day');
+
+		// return res
+		return $this
+			->createQueryBuilder('l')
+			->select(['l.id', 'l.name', 'l.url', 'l.createdAt'])
+			->where('l.createdAt >= :date')
+			// date on mysql format
+			->setParameter('date', $date->format('Y-m-d H:i:s'))
+			->orderBy('l.id')
+			->getQuery()
+			->getResult();
+	}
 }

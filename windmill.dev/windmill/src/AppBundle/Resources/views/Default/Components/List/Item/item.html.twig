@@ -1,1 +1,5 @@
-<li><a href="{{ item.url }}">{{ item.name }}</a> price: {{ item.price|sample }}, {{ item.price|truncate(10) }}</li>
+<li>
+    <a href="{{ item.url }}">{{ item.name }}</a>
+    date: {{ item.createdAt|date("m/d/Y") }}
+    <a href="{{ path('link_edit',{ 'id': item.id }) }}" class="btn btn-small">modifier</a>
+</li>
